@@ -9,6 +9,14 @@ Implementación completa de una API de productos y carritos con persistencia en 
 ![Mongoose](https://img.shields.io/badge/Mongoose-8.0-orange)  
 ![Handlebars](https://img.shields.io/badge/Handlebars-7.1-orange)
 
+Tecnologías principales
+
+    Node.js + Express
+    MongoDB Atlas + Mongoose (populate, lean, paginate-v2)
+    express-handlebars (vistas)
+    dotenv (variables de entorno)
+    Socket.IO (preparado para real-time)
+
 ## Objetivos cumplidos. ✓
 
 - Persistencia principal en **MongoDB Atlas** (productos y carritos)
@@ -26,6 +34,33 @@ Implementación completa de una API de productos y carritos con persistencia en 
 - Código modular, limpio y escalable (routers, managers, models)
 - Validaciones en managers + manejo de errores
 
+## Estructura de carpetas
+
+```text
+Backend.Proyecto.Final/
+├── package.json
+├── .gitignore
+├── .env.example               # Ejemplo de variables (no subas el real)
+├── README.md
+└── src/
+    ├── app.js                 # Servidor principal + conexión Mongo + rutas vistas
+    ├── managers/              # Lógica de negocio (ProductManager y CartManager)
+    │   ├── ProductManager.js
+    │   └── CartManager.js
+    ├── models/                # Esquemas Mongoose
+    │   ├── Product.js
+    │   └── Cart.js
+    ├── routers/               # Rutas API separadas
+    │   ├── productsRouter.js
+    │   └── cartsRouter.js
+    └── views/                 # Plantillas Handlebars
+        ├── layouts/
+        │   └── main.handlebars
+        ├── home.handlebars
+        ├── products.handlebars
+        ├── productDetail.handlebars
+        └── cart.handlebars 
+```
 ## Instalación. (paso a paso)
 
 1. **Clonar el repositorio.**  
@@ -35,19 +70,19 @@ Implementación completa de una API de productos y carritos con persistencia en 
 
 2. **Instalar dependencias.** 
 
-    npm install
+       npm install
 
 4. **Crear archivo .env en la raíz del proyecto.** 
  
-    Crea un archivo llamado .env y pega tu cadena de conexión de MongoDB Atlas.
+       Crea un archivo llamado .env y pega tu cadena de conexión de MongoDB Atlas.
 
 5. **Iniciar el servidor.** 
  
-     npm start
+       npm start
 
 6. **Abrir en el navegador.**
  
-     Página principal: http://localhost:8080
+       Página principal: http://localhost:8080
 
 7. **Endpoints clave.**
   
@@ -93,6 +128,11 @@ Implementación completa de una API de productos y carritos con persistencia en 
     GET /products → Lista paginada de productos
     GET /products/:pid → Detalle de producto
     GET /carts/:cid → Vista del carrito
+
+    
+
+  
+
 
 
 
