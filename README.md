@@ -1,6 +1,6 @@
 # Backend.Proyecto.Final
 
-Proyecto final del curso **Backend** de CoderHouse.  
+Proyecto final del curso **Programación Backend I: Desarrollo Avanzado de Backend**. 
 Implementación completa de una API de productos y carritos con persistencia en **MongoDB Atlas**, paginación profesional, ordenamiento, filtros, vistas Handlebars y gestión completa de carritos.
 
 ![Node.js](https://img.shields.io/badge/Node.js-20.x-green)  
@@ -86,3 +86,4 @@ Implementación completa de una API de productos y carritos con persistencia en 
     GET /products → Lista paginada de productos
     GET /products/:pid → Detalle de producto
     GET /carts/:cid → Vista del carrito
+
