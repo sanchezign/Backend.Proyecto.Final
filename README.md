@@ -9,7 +9,7 @@ Implementación completa de una API de productos y carritos con persistencia en 
 ![Mongoose](https://img.shields.io/badge/Mongoose-8.0-orange)  
 ![Handlebars](https://img.shields.io/badge/Handlebars-7.1-orange)
 
-## Objetivos cumplidos ✓
+## Objetivos cumplidos. ✓
 
 - Persistencia principal en **MongoDB Atlas** (productos y carritos)
 - Endpoints completos para productos y carritos (GET, POST, PUT, DELETE)
@@ -26,26 +26,47 @@ Implementación completa de una API de productos y carritos con persistencia en 
 - Código modular, limpio y escalable (routers, managers, models)
 - Validaciones en managers + manejo de errores
 
-## Instalación (paso a paso)
+##  ESTRUCTURA DEl PROYECTO.
+    src/
+├── app.js                    # Servidor principal + conexión + rutas vistas
+├── managers/                 # Lógica de negocio
+│   ├── ProductManager.js
+│   └── CartManager.js
+├── models/                   # Esquemas Mongoose
+│   ├── Product.js
+│   └── Cart.js
+├── routers/                  # Rutas API
+│   ├── productsRouter.js
+│   └── cartsRouter.js
+└── views/                    # Handlebars
+    ├── layouts/
+    │   └── main.handlebars
+    ├── home.handlebars
+    ├── products.handlebars
+    ├── productDetail.handlebars
+    └── cart.handlebars
 
-1. **Clonar el repositorio**  
+## Instalación. (paso a paso)
+
+1. **Clonar el repositorio.**  
    ```bash
    git clone https://github.com/tu-usuario/backend-proyecto-final.git
    cd backend-proyecto-final
 
-2. **Instalar dependencias** 
+2. **Instalar dependencias.** 
    npm install
 
-3. **Crear archivo .env en la raíz del proyecto** 
+3. **Crear archivo .env en la raíz del proyecto.** 
   Crea un archivo llamado .env y pega tu cadena de conexión de MongoDB Atlas.
 
-4. **Iniciar el servidor** 
+4. **Iniciar el servidor.** 
   npm start
 
-5. **Abrir en el navegador**
+5. **Abrir en el navegador.**
   Página principal: http://localhost:8080
 
-6. **Endpoints clave**
+6. **Endpoints clave.**
+  
   Productos
 
    GET /api/products
