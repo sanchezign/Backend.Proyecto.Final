@@ -26,26 +26,6 @@ Implementación completa de una API de productos y carritos con persistencia en 
 - Código modular, limpio y escalable (routers, managers, models)
 - Validaciones en managers + manejo de errores
 
-##  ESTRUCTURA DEl PROYECTO.
-    src/
-├── app.js                    # Servidor principal + conexión + rutas vistas
-├── managers/                 # Lógica de negocio
-│   ├── ProductManager.js
-│   └── CartManager.js
-├── models/                   # Esquemas Mongoose
-│   ├── Product.js
-│   └── Cart.js
-├── routers/                  # Rutas API
-│   ├── productsRouter.js
-│   └── cartsRouter.js
-└── views/                    # Handlebars
-    ├── layouts/
-    │   └── main.handlebars
-    ├── home.handlebars
-    ├── products.handlebars
-    ├── productDetail.handlebars
-    └── cart.handlebars
-
 ## Instalación. (paso a paso)
 
 1. **Clonar el repositorio.**  
@@ -105,4 +85,4 @@ Implementación completa de una API de productos y carritos con persistencia en 
     GET / → Página de bienvenida
     GET /products → Lista paginada de productos
     GET /products/:pid → Detalle de producto
-    GET /carts/:cid → Vista del carrito 
+    GET /carts/:cid → Vista del carrito
