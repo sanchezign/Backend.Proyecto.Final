@@ -40,7 +40,7 @@ Tecnologías principales
 Backend.Proyecto.Final/
 ├── package.json
 ├── .gitignore
-├── .env.example               # Ejemplo de variables (no subas el real)
+├── .env.example               
 ├── README.md
 └── src/
     ├── app.js                 # Servidor principal + conexión Mongo + rutas vistas
@@ -132,6 +132,7 @@ Backend.Proyecto.Final/
     
 
   
+
 
 
 
