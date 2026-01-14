@@ -34,28 +34,35 @@ Implementación completa de una API de productos y carritos con persistencia en 
    cd backend-proyecto-final
 
 2. **Instalar dependencias.** 
-   npm install
 
-3. **Crear archivo .env en la raíz del proyecto.** 
-  Crea un archivo llamado .env y pega tu cadena de conexión de MongoDB Atlas.
+    npm install
 
-4. **Iniciar el servidor.** 
-  npm start
+4. **Crear archivo .env en la raíz del proyecto.** 
+ 
+    Crea un archivo llamado .env y pega tu cadena de conexión de MongoDB Atlas.
 
-5. **Abrir en el navegador.**
-  Página principal: http://localhost:8080
+5. **Iniciar el servidor.** 
+ 
+     npm start
 
-6. **Endpoints clave.**
+6. **Abrir en el navegador.**
+ 
+     Página principal: http://localhost:8080
+
+7. **Endpoints clave.**
   
-  Productos
+  Productos:
 
-   GET /api/products
+   GET /api/products :
+   
     Lista productos con paginación, ordenamiento y filtros.
 
-   POST /api/products
+   POST /api/products :
+    
     Crea un producto nuevo.
 
   Parámetros:
+  
     limit → cantidad por página (default: 10)
     page → número de página (default: 1)
     sort → asc / desc por precio (default: sin orden)
@@ -86,4 +93,5 @@ Implementación completa de una API de productos y carritos con persistencia en 
     GET /products → Lista paginada de productos
     GET /products/:pid → Detalle de producto
     GET /carts/:cid → Vista del carrito
+
 
