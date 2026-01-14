@@ -1,0 +1,51 @@
+<h2>Productos con Paginación</h2>
+
+{{#if payload.length}}
+  <ul>
+    {{#each payload}}
+      <li>
+        <strong>{{this.title}}</strong> 
+        - ${{this.price}} 
+        (Stock: {{this.stock}})
+        
+        <a href="/products/{{this._id}}">Ver detalle</a>
+        
+        <button onclick="agregarAlCarrito('{{this._id}}')">Agregar al carrito</button>
+      </li>
+    {{/each}}
+  </ul>
+{{else}}
+  <p>No hay productos todavía. Crea algunos con POST /api/products.</p>
+{{/if}}
+
+<div>
+  {{#if hasPrevPage}}
+    <a href="{{prevLink}}">Anterior</a>
+  {{/if}}
+  
+  Página {{page}} de {{totalPages}}
+  
+  {{#if hasNextPage}}
+    <a href="{{nextLink}}">Siguiente</a>
+  {{/if}}
+</div>
+
+<script>
+  // Depuración simple en consola del navegador (sin helper json, usando JSON.stringify nativo)
+  console.log('Datos recibidos en la vista products.handlebars:', JSON.stringify({
+    totalPages: {{totalPages}},
+    page: {{page}},
+    hasPrevPage: {{hasPrevPage}},
+    hasNextPage: {{hasNextPage}},
+    payloadLength: {{payload.length}},
+    firstProductTitle: '{{@root.payload.[0].title}}'  // Ejemplo para primer producto (string seguro)
+  }));
+
+  function agregarAlCarrito(pid) {
+    
+    const carritoId = '6966d989d96f9b87140bc20a';  // ← Cambia esto
+    fetch(`/api/carts/${carritoId}/products/${pid}`, { method: 'POST' })
+      .then(() => alert('Producto agregado al carrito'))
+      .catch(err => alert('Error al agregar: ' + err.message));
+  }
+</script>
